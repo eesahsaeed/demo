@@ -58,7 +58,7 @@ function App(){
         </Button>
       </Form> 
       <a href={demo} download>
-        Download Demo
+        Download sample data
       </a>
     </div>
   )

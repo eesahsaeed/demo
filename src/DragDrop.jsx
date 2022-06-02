@@ -14,7 +14,7 @@ function DragDrop({setState}) {
     pdfData.append( "pdf", file );
     //pdfData.append()
 
-    fetch('http://localhost:4000/users/parse', {
+    fetch('https://txttojsondemo.herokuapp.com/users/parse', {
       method: 'POST',
       headers: {
         "Accept": "application/json"
@@ -24,7 +24,6 @@ function DragDrop({setState}) {
     .then(resp => resp.json())
     .then(r => {
       let state = r[0];
-      console.log(state);
       setState({
         fullName: state["FIRST_NAME"] + " " + state["LAST_NAME"],
         phoneNumber: state["NUMBER"],
